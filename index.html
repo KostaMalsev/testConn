@@ -19,7 +19,7 @@
 
 <script>
 let cnn = navigator.connection;
-document.querySelector(".subtitle").innerHTML = 'TRIP:' + cnn.rtt + ' DOWNLNK:' + cnn.downlink + ' TYPE:' cnn.effectiveType;
+document.querySelector(".subtitle").innerHTML = 'TRIP:' + cnn.rtt + ' DOWNLNK:' + cnn.downlink + ' TYPE:' + cnn.effectiveType;
 document.getElementById('ref').innerHTML = 'REF: rttMin = 100, downlink 3Mbit ';
 /*
 async function makeCall() {
