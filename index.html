@@ -1,6 +1,6 @@
 <script>
 
-function makeCall() {
+async function makeCall() {
     const configuration = {'iceServers': [{'urls': 'stun:stun.l.google.com:19302'}]}
     const peerConnection = new RTCPeerConnection(configuration);
     /*signalingChannel.addEventListener('message', async message => {
@@ -10,12 +10,12 @@ function makeCall() {
         }
     });*/
     
-    console.log(peerConnection.getStats());
+    console.log(await peerConnection.getStats());
     //const offer = await peerConnection.createOffer();
     //await peerConnection.setLocalDescription(offer);
     //signalingChannel.send({'offer': offer});
 }
 
-makeCall();
+await makeCall();
 
 </script>
