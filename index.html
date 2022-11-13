@@ -9,8 +9,8 @@ async function makeCall() {
             await peerConnection.setRemoteDescription(remoteDesc);
         }
     });*/
-    
-    console.log(await peerConnection.getStats());
+    let res = await peerConnection.getStats();
+    console.log(res);
     //const offer = await peerConnection.createOffer();
     //await peerConnection.setLocalDescription(offer);
     //signalingChannel.send({'offer': offer});
