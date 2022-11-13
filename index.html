@@ -1,5 +1,8 @@
 <script>
 
+
+
+/*
 async function makeCall() {
     const configuration = {'iceServers': [{'urls': 'stun:stun.l.google.com:19302'}]}
     const peerConnection = new RTCPeerConnection(configuration);
@@ -8,13 +11,13 @@ async function makeCall() {
             const remoteDesc = new RTCSessionDescription(message.answer);
             await peerConnection.setRemoteDescription(remoteDesc);
         }
-    });*/
+    });
     let res = await peerConnection.getStats();
     console.log(res);
     //const offer = await peerConnection.createOffer();
     //await peerConnection.setLocalDescription(offer);
     //signalingChannel.send({'offer': offer});
-}
+}*/
 
 makeCall();
 
