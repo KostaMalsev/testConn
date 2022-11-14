@@ -18,6 +18,11 @@
 
 <script src="https://unpkg.com/webrtc-test-suite@2.1.2/dist/index.js"></script>
 <script>
+
+_rtc.checkRelayPerformance(rtcConfig)
+    .then(()=>console.log("Peer connection works"))
+    .catch(()=>console.log("Peer connection does not work"));
+    
 //let iosconn= navigator.webkitConnection;
 let cnn = navigator.connection;
 if( cnn){
