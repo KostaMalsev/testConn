@@ -35,7 +35,7 @@ if( cnn){
 document.querySelector(".subtitle").innerHTML = 'TRIP:' + cnn.rtt + ' DOWNLNK:' + cnn.downlink + ' TYPE:' + cnn.effectiveType;
 document.getElementById('ref').innerHTML = 'REF: rttMin = 100, downlink 3Mbit ';
 }else{
-  document.querySelector(".subtitle").innerHTML = (Object.keys({_rtc})).toString();//JSON.stringify(_rtc); //'unavailible'
+  document.querySelector(".subtitle").innerHTML = (Object.keys(_rtc)).toString();//JSON.stringify(_rtc); //'unavailible'
 }
 //document.getElementById('ref').innerHTML = //JSON.stringify(iosconn);
 /*
