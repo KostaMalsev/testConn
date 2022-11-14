@@ -20,9 +20,12 @@
 <script>
 //let iosconn= navigator.webkitConnection;
 let cnn = navigator.connection;
+if( cnn){
 document.querySelector(".subtitle").innerHTML = 'TRIP:' + cnn.rtt + ' DOWNLNK:' + cnn.downlink + ' TYPE:' + cnn.effectiveType;
 document.getElementById('ref').innerHTML = 'REF: rttMin = 100, downlink 3Mbit ';
-
+}else{
+  document.querySelector(".subtitle").innerHTML = 'unavailible'
+}
 //document.getElementById('ref').innerHTML = //JSON.stringify(iosconn);
 /*
 async function makeCall() {
