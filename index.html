@@ -24,7 +24,7 @@ let rtcConfig =
     {
         iceServers: [{ RTCIceServer: { urls:  STUN_URL } }]
     };
-const configuration = {iceServers: [{urls: 'stun.l.google.com:19302'}]};
+const configuration = {iceServers: [{urls: 'numb.viagenie.ca:3478'}]};
 
 let res = await _rtc.checkRelayPerformance(configuration);
 
