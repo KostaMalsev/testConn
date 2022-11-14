@@ -19,6 +19,12 @@
 <script src="https://unpkg.com/webrtc-test-suite@2.1.2/dist/index.js"></script>
 <script>
 
+
+let config =
+    {
+        iceServers = new [{ new RTCIceServer { urls = STUN_URL } }];
+    };
+
 _rtc.checkRelayPerformance(rtcConfig)
     .then(()=>console.log("Peer connection works"))
     .catch(()=>console.log("Peer connection does not work"));
