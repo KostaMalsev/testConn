@@ -25,9 +25,9 @@ let rtcConfig =
         iceServers: [{ RTCIceServer: { urls:  STUN_URL } }]
     };
 
-_rtc.checkRelayPerformance(rtcConfig)
-    .then(()=>console.log("Peer connection works"))
-    .catch(()=>console.log("Peer connection does not work"));
+let res = await _rtc.checkRelayPerformance(rtcConfig);
+
+    
     
 //let iosconn= navigator.webkitConnection;
 let cnn = navigator.connection;
@@ -35,7 +35,7 @@ if( cnn){
 document.querySelector(".subtitle").innerHTML = 'TRIP:' + cnn.rtt + ' DOWNLNK:' + cnn.downlink + ' TYPE:' + cnn.effectiveType;
 document.getElementById('ref').innerHTML = 'REF: rttMin = 100, downlink 3Mbit ';
 }else{
-  document.querySelector(".subtitle").innerHTML = 'unavailible'
+  document.querySelector(".subtitle").innerHTML = JSON.stringify(res); //'unavailible'
 }
 //document.getElementById('ref').innerHTML = //JSON.stringify(iosconn);
 /*
